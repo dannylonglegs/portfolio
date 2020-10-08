@@ -1,0 +1,36 @@
+// @font-face {
+//   font-family: "SportingGrotesque-Regular";
+//   src: url("./fonts/SportingGrotesque-Regular.otf") format("opentype");
+// }
+
+@font-face {
+  font-family: "Minipax-SemiBold";
+  src: url("./fonts/Minipax-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Minipax-Bold";
+  src: url("./fonts/Minipax-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Minipax-Regular";
+  src: url("./fonts/Minipax-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Minipax-Medium";
+  src: url("./fonts/Minipax-Medium.otf") format("opentype");
+}
+
+// @font-face {
+//     font-family: "BluuNext-Bolditalic";
+//     src: url("./fonts/BluuNext-Bolditalic") format("opentype");
+//   }
+
+// @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|PT+Mono|Space+Mono&display=swap');
+
+$font-1: 'Minipax-SemiBold', serif; 
+$font-2: serif;
