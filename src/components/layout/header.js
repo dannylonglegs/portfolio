@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Name from "../content/name"
 
-const Header = props => {
+const Description = props => {
   return (
     <header>
       <p class="description">
@@ -12,16 +12,8 @@ const Header = props => {
         Gatsby/React/Contentful/Netlify.
       </p>
       <br />
-      <h1>Contact:</h1>
-      <a class="telephone" href={"tel:" + props.phoneStr}>
-        {props.phoneStr}
-      </a>
-      <br />
-      <a class="email" href={"to:" + props.email}>
-        {props.email}
-      </a>
     </header>
   )
 }
 
-export default Header
+export default Description
