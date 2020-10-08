@@ -1,1 +1,1 @@
-Project Portfolio template primarily for artists.
+Personal portfolio
