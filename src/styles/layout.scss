@@ -3,22 +3,23 @@ html {
   height: 100%;
   font-family: $font-1;
   padding: 8px;
-  line-height: 1.1rem;
-  font-size: 32px;
-  background-color: rgb(231, 233, 240);
+  line-height: 130%;
+  font-size: 20px;
+  // background-color: rgb(255, 247, 0);
 }
 
 header {
   font-family: $font-1;
-  font-size: 32px;
+  // font-size: 32px;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 28px;
+  letter-spacing: 2px;
   font-weight: normal;
   font-family: $font-1;
-  margin: 0;
+  margin: 0 0 8px 0;
   text-decoration: dotted;
 }
 
@@ -28,13 +29,13 @@ p {
 
 a.telephone,
 a.email {
-  font-family: sans-serif;
+  font-family: $font-2;
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 80vh;
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: 80vh;
 }
 
 .gallery {
@@ -53,20 +54,27 @@ a {
   color: black;
   text-decoration: none;
   box-shadow: none;
-   &:hover {
+  &:hover {
     text-decoration: underline;
   }
 }
 
 .skills {
-  font-family: sans-serif;
+  font-family: $font-2;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 100%;
   width: 100%;
+  opacity: 0;
+  transition: 1s opacity;
+}
+
+.fade-in {
+  opacity: 1 ;
 }
 
 div.carousel {
@@ -94,7 +102,7 @@ div.carousel {
 }
 
 .work-link {
-  font-family: sans-serif;
+  font-family: $font-2;
 }
 
 .daniel,
@@ -104,13 +112,15 @@ div.carousel {
 }
 
 p.description {
-  font-family: sans-serif;
+  font-family: $font-2;
   font-weight: lighter;
+  width: 60%;
 }
 
 .name {
   display: flex;
   font-family: $font-1;
+  font-size: 32px;
 }
 
 .name-wrapper {
@@ -119,10 +129,10 @@ p.description {
 }
 
 .daniel {
-  transition: all ease-in .5s;
+  transition: all ease-in 0.5s;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  width: 250px
+  width: 250px;
 }
 
 .fernandes {
@@ -137,17 +147,44 @@ p.description {
   display: inline-block;
   animation-name: wind;
   animation-duration: 1s;
-  transition: all ease-in .5s;
+  transition: all ease-in 0.5s;
+}
+
+li.work-link {
+  transition: all ease-in 0.2s;
+  // display: inline-block;
+  // width:100%;
+  &:hover {
+    transition: all ease-in 0.2s;
+    transform: translate(10px, 0);
+    color: blue;
+    a {
+      color: blue;
+    }
+  }
+  a {
+    transition: all ease-in 0.2s;
+    &:hover {
+      text-decoration: none;
+
+      transition: all ease-in 0.2s;
+      // font-style: italic;
+    }
+  }
+}
+
+.page-back {
+  font-size: 96px;
 }
 
 @keyframes wind {
-  0%   {
+  0% {
     transform: rotate(0deg);
   }
-  50%  {
+  50% {
     transform: rotate(45deg) translate(50px, 10px);
   }
-  100% { 
-    transform: rotate(0deg) translate(0,0);
+  100% {
+    transform: rotate(0deg) translate(0, 0);
   }
 }

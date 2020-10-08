@@ -84,6 +84,7 @@ module.exports = {
         accessToken: `QotnjaeWy1Zm54yb-0sicbgRtw7nJ5f8DR5CQ4IP2n4`,
       },
     },
+    `gatsby-plugin-transition-link`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

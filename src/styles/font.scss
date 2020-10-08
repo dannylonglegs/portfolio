@@ -23,6 +23,10 @@
   src: url("./fonts/Minipax-Medium.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "BluuNext-Titling";
+  src: url("./fonts/BluuNext-Titling.otf") format("opentype");
+}
 // @font-face {
 //     font-family: "BluuNext-Bolditalic";
 //     src: url("./fonts/BluuNext-Bolditalic") format("opentype");
@@ -32,5 +36,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|PT+Mono|Space+Mono&display=swap');
 
-$font-1: 'Minipax-SemiBold', serif; 
-$font-2: serif;
+// $font-1: 'Minipax-SemiBold', serif; 
+$font-1: 'BluuNext-Titling', serif; 
+// $font-2: "Arial", sans-serif;
+$font-2: "Arial Narrow";

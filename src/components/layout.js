@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Nav from "./layout/nav"
+import Nav from "./layout/projectLinks"
 import Footer from "./layout/footer"
 
 import { rhythm, scale } from "../utils/typography"
@@ -24,18 +24,9 @@ class Layout extends React.Component {
 
     return (
       <div class="layout">
-        <Nav
-          title={title}
-          projects={projects}
-          description={description}
-          skills={skills}
-          position={position}
-          phoneInt={phoneInt}
-          phoneStr={phoneStr}
-          email={email}
-        />
-        <main>{children}</main>
-        {/* <Footer /> */}
+    
+        <main id="main">{children}</main>
+      
       </div>
     )
   }

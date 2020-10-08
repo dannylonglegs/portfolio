@@ -1,37 +1,34 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ContentView from "../components/content/contentView"
 import Gallery from "../components/content/gallery"
+// import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class ProjectTemplate extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {document.getElementById("main").classList.add("fade-in")}, 1000);
+  }
+
+  componentWillUnmount() {
+    document.getElementById("main").classList.remove("fade-in")
+  }
+  
   render() {
     const project = this.props.data.contentfulProject
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const skills = this.props.data.site.siteMetadata.skills
-    const siteDescription = this.props.data.site.siteMetadata.description
-    const projects = this.props.data.allContentfulProject.edges
-    const position = this.props.data.site.siteMetadata.position
-    const email = this.props.data.site.siteMetadata.email
-    const phoneInt = this.props.data.site.siteMetadata.phoneInt
-    const phoneStr = this.props.data.site.siteMetadata.phoneStr
 
+    console.log(this.props, "props in project")
     return (
-      <Layout
-        location={this.props.location}
-        title={siteTitle}
-        description={siteDescription}
-        projects={projects}
-        skills={skills}
-        position={position}
-        phoneInt={phoneInt}
-        phoneStr={phoneStr}
-        email={email}
-      >
+      <Layout location={this.props.location}>
         <SEO title={project.projectTitle} />
-        <Gallery project={project}/>
+        <div id="project-content" class="project-content">
+          <AniLink className="page-back" fade to={"/"}>
+            ←
+          </AniLink>
+          <Gallery project={project} />
+        </div>
       </Layout>
     )
   }
@@ -54,8 +51,7 @@ export const pageQuery = graphql`
     }
     allContentfulProject {
       edges {
-        node
-         {
+        node {
           projectTitle
           slug
         }
@@ -68,7 +64,7 @@ export const pageQuery = graphql`
           src
           sizes
           srcSet
-          aspectRatio 
+          aspectRatio
         }
       }
     }

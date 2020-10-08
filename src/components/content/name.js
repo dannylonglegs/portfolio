@@ -5,7 +5,9 @@ const Name = props => {
   const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
-    animate()
+    setTimeout(() => {
+      animate()
+    }, 1000)
   }, [])
 
   const animate = async () => {
