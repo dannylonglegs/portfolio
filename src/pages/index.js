@@ -1,12 +1,22 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Description from "../components/layout/description"
+import ProjectLinks from "../components/layout/projectLinks"
 
 class BlogIndex extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {
+      document.getElementById("main").classList.add("fade-in")
+    }, 1000)
+  }
+
+  componentWillUnmount() {
+    document.getElementById("main").classList.remove("fade-in")
+  }
+
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -17,29 +27,45 @@ class BlogIndex extends React.Component {
     const email = data.site.siteMetadata.email
     const phoneInt = data.site.siteMetadata.phoneInt
     const phoneStr = data.site.siteMetadata.phoneStr
+    const skillsLength = skills.length
+
+    let skillsList = (
+      <p>
+        {skills.map((skill, i) => {
+          if (skillsLength === i + 1) {
+            return <span>{skill}</span>
+          } else {
+            return <span>{skill} / </span>
+          }
+        })}
+      </p>
+    )
 
     return (
       <Layout
         location={this.props.location}
-        title={siteTitle}
-        description={siteDescription}
-        projects={projects}
-        skills={skills}
-        position={position}
-        phoneInt={phoneInt}
-        phoneStr={phoneStr}
-        email={email}
       >
+        <Description
+          title={siteTitle}
+          email={email}
+          position={position}
+          phoneInt={phoneInt}
+          phoneStr={phoneStr}
+        />
+        <h1>Contact:</h1>
+        <a class="telephone" href={"tel:" + phoneStr}>
+          {phoneStr}
+        </a>
+        <a class="email" href={"to:" + email}>
+          {email}
+        </a>
+        <br />
+        <h1>Skills:</h1>
+        <div class="skills">{skillsList}</div>
+        <br />
+        <h1>Work:</h1>
+        <ProjectLinks projects={projects} />
         <SEO title="All posts" />
-        {/* {posts.map(({ node }) => {
-          const title = node.projectTitle || node.slug
-          return (
-            <article key={node.slug}>
-              <section>
-              </section>
-            </article>
-          )
-        })} */}
       </Layout>
     )
   }
@@ -65,6 +91,13 @@ export const pageQuery = graphql`
         node {
           projectTitle
           slug
+          featuredImage {
+            fluid {
+              base64
+              src
+              srcSet
+            }
+          }
         }
       }
     }

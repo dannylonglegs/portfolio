@@ -51,17 +51,6 @@ const Gallery = props => {
 
   return (
     <div class="gallery">
-      {/* <CarouselProvider
-        // naturalSlideWidth={100}
-        // naturalSlideHeight={125}
-        totalSlides={props.project.gallery.length}
-      >
-        <Slider>
-          {images}
-        </Slider>
-        <ButtonBack>{"<--"}</ButtonBack>
-        <ButtonNext>{"-->"}</ButtonNext>
-      </CarouselProvider> */}
       {images[currentIndex]}
       <div class="image-nav">
         <button id="decrease" onClick={decreaseIndex}>←</button>
