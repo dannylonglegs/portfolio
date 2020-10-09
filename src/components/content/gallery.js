@@ -51,12 +51,13 @@ const Gallery = props => {
 
   return (
     <div class="gallery">
-      {images[currentIndex]}
+      {/* {images[currentIndex]}
       <div class="image-nav">
         <button id="decrease" onClick={decreaseIndex}>←</button>
         <span>{currentIndex + 1 + "/" + indexLimit}</span>
         <button id="increase" onClick={increaseIndex}>→</button>
-      </div>
+      </div> */}
+      {images}
     </div>
   )
 }

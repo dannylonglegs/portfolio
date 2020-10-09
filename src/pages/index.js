@@ -42,9 +42,7 @@ class BlogIndex extends React.Component {
     )
 
     return (
-      <Layout
-        location={this.props.location}
-      >
+      <Layout location={this.props.location}>
         <Description
           title={siteTitle}
           email={email}
@@ -54,10 +52,10 @@ class BlogIndex extends React.Component {
         />
         <h1>Contact:</h1>
         <a class="telephone" href={"tel:" + phoneStr}>
-          {phoneStr}
+          ✆ {phoneStr}
         </a>
         <a class="email" href={"to:" + email}>
-          {email}
+          ✉ {email}
         </a>
         <br />
         <h1>Skills:</h1>

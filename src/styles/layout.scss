@@ -3,7 +3,7 @@ html {
   height: 100%;
   font-family: $font-1;
   padding: 8px;
-  line-height: 130%;
+  line-height: 140%;
   font-size: 20px;
   // background-color: rgb(255, 247, 0);
 }
@@ -15,12 +15,13 @@ header {
 }
 
 h1 {
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 24px;
+  letter-spacing: 5px;
   font-weight: normal;
   font-family: $font-1;
   margin: 0 0 8px 0;
   text-decoration: dotted;
+  // text-transform: uppercase;
 }
 
 p {
@@ -39,7 +40,10 @@ a.email {
 }
 
 .gallery {
-  max-height: 80vh;
+  // max-height: 80vh;
+  .gatsby-image-wrapper {
+    margin: 0 0 16px 0;
+  }
 }
 
 ul {
@@ -120,7 +124,7 @@ p.description {
 .name {
   display: flex;
   font-family: $font-1;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .name-wrapper {
