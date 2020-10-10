@@ -60,11 +60,14 @@ class BlogIndex extends React.Component {
         <a class="email" href={"https://www.instagram.com/danny_long_legs_"}>
            @danny_long_legs_
         </a>
+        <a class="email" href={"https://github.com/dannylonglegs"}>
+           Github: dannylonglegs
+        </a>
         <br />
         <h1>Skills:</h1>
         <div class="skills">{skillsList}</div>
         <br />
-        <h1>Work:</h1>
+        <h1>Featured Projects:</h1>
         <ProjectLinks projects={projects} />
         <SEO title="All posts" />
       </Layout>
