@@ -57,6 +57,9 @@ class BlogIndex extends React.Component {
         <a class="email" href={"to:" + email}>
           ✉ {email}
         </a>
+        <a class="email" href={"https://www.instagram.com/danny_long_legs_"}>
+           @danny_long_legs_
+        </a>
         <br />
         <h1>Skills:</h1>
         <div class="skills">{skillsList}</div>
