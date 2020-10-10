@@ -6,7 +6,7 @@ module.exports = {
     email: `ddanfernan@gmail.com`,
     phoneInt: 5149685526,
     phoneStr: `(514)968-5526`,
-    
+    siteUrl: `https://www.danielalexanderfernandes.ca`,
     description: `My name is Daniel Alexander Fernandes and I am a freelance front-end web developer from Winnipeg, MB currently located in Montreal, QC. I am especially interested in simple website design, UI/UX, and React. The websites I make usually use the jamstack of Gatsby / React / Contentful / Netlify.`,
     skills: ['HTML', 'JavaScript', 'React', 'Gatsby', 'Wordpress', 'CSS & SASS', 'A11y', 'Figma', "Photoshop"]
   },
@@ -55,7 +55,6 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
