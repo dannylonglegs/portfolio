@@ -27,18 +27,8 @@
   font-family: "BluuNext-Titling";
   src: url("./fonts/BluuNext-Titling.otf") format("opentype");
 }
-// @font-face {
-//     font-family: "BluuNext-Bolditalic";
-//     src: url("./fonts/BluuNext-Bolditalic") format("opentype");
-//   }
-
-// @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|PT+Mono|Space+Mono&display=swap');
 
-// $font-1: 'Minipax-Bold', serif;
 $font-1: 'Times New Roman', serif; 
-// $font-1: 'BluuNext-Titling', serif; 
-// $font-1: 'Segoe UI', serif; 
-// $font-2: "Arial", sans-serif;
-$font-2: "Arial Narrow";
+$font-2: "Arial Narrow", sans-serif;
