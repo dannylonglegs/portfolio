@@ -6,16 +6,19 @@ import SEO from "../components/seo"
 import Gallery from "../components/content/gallery"
 // import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import RichText from "../components/content/richText"
 
 class ProjectTemplate extends React.Component {
   componentDidMount() {
-    setTimeout(() => {document.getElementById("main").classList.add("fade-in")}, 1000);
+    setTimeout(() => {
+      document.getElementById("main").classList.add("fade-in")
+    }, 1000)
   }
 
   componentWillUnmount() {
     document.getElementById("main").classList.remove("fade-in")
   }
-  
+
   render() {
     const project = this.props.data.contentfulProject
 
@@ -27,6 +30,19 @@ class ProjectTemplate extends React.Component {
           <AniLink className="page-back" fade to={"/"}>
             ←
           </AniLink>
+          <h1>{project.projectTitle}</h1>
+          <div class="project-info">
+            <RichText
+              content={
+                project.childContentfulProjectProjectDescriptionRichTextNode
+                  .projectDescription
+              }
+            />
+            <div class="links">
+              <a href={project.link}>→ Visit Site</a>
+              <a href={project.githubLink}>→ Github Repository</a>
+            </div>
+          </div>
           <Gallery project={project} />
         </div>
       </Layout>
@@ -54,17 +70,40 @@ export const pageQuery = graphql`
         node {
           projectTitle
           slug
+          childContentfulProjectProjectDescriptionRichTextNode {
+            projectDescription
+          }
         }
       }
     }
     contentfulProject(slug: { eq: $slug }) {
       projectTitle
+      childContentfulProjectProjectDescriptionRichTextNode {
+        projectDescription
+      }
+      link
+      githubLink
       gallery {
         fluid(maxWidth: 800) {
           src
           sizes
           srcSet
           aspectRatio
+        }
+      }
+      galleryTags {
+        title
+        tag
+        image {
+          fluid {
+            src
+            sizes
+            srcSet
+            aspectRatio
+          }
+        }
+        description {
+          description
         }
       }
     }

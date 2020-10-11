@@ -5,12 +5,10 @@ html {
   padding: 8px;
   line-height: 140%;
   font-size: 20px;
-  // background-color: rgb(255, 247, 0);
 }
 
 header {
   font-family: $font-1;
-  // font-size: 32px;
   margin-bottom: 1rem;
 }
 
@@ -21,7 +19,6 @@ h1 {
   font-family: $font-1;
   margin: 0 0 8px 0;
   text-decoration: dotted;
-  // text-transform: uppercase;
 }
 
 p {
@@ -33,16 +30,27 @@ a.email {
   font-family: $font-2;
 }
 
-.layout {
+.gallery {
   // display: grid;
   // grid-template-columns: 1fr;
-  // grid-template-rows: 80vh;
-}
-
-.gallery {
-  // max-height: 80vh;
+  // grid-gap: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // max-width: 100vw;
   .gatsby-image-wrapper {
-    margin: 0 0 16px 0;
+    margin: 16px 16px 16px 0;
+    border: 2px solid black;
+    width: 60vw;
+    &.desktop {
+      width: 80vw;
+    }
+    &.mobile {
+      width: 30vw;
+    }
+    @include medium {
+      width: 100%;
+    }
   }
 }
 
@@ -84,20 +92,7 @@ main {
 }
 
 .fade-in {
-  opacity: 1 ;
-}
-
-// div.carousel {
-//   height: 70%;
-//   width: 70%;
-// }
-
-.gatsby-image-wrapper {
-  border: 1px solid black;
-  width: 50vw;
-  @include small {
-    width: 100%;
-  }
+  opacity: 1;
 }
 
 .image-nav {
@@ -135,6 +130,44 @@ p.description {
     width: 100%;
   }
 }
+
+.project-content {
+
+  h1 {
+    font-size: 32px;
+    font-family: $font-2;
+    letter-spacing: normal;
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: normal;
+    font-family: $font-2;
+    margin: 0 0 16px 0;
+  }
+  .project-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 28px;
+      margin-bottom: 32px;
+      font-family: $font-2; 
+      transition: all ease-in 0.2s;
+      &:hover {
+        color: blue;
+        transition: all ease-in 0.2s;
+        transform: translate(10px, 0);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 
 .name {
   display: flex;
@@ -179,8 +212,6 @@ p.description {
 
 li.work-link {
   transition: all ease-in 0.2s;
-  // display: inline-block;
-  // width:100%;
   &:hover {
     transition: all ease-in 0.2s;
     transform: translate(10px, 0);
@@ -195,13 +226,25 @@ li.work-link {
       text-decoration: none;
 
       transition: all ease-in 0.2s;
-      // font-style: italic;
     }
   }
 }
 
 .page-back {
-  font-size: 96px;
+  font-size: 80px;
+  &:hover {
+    text-decoration: none;
+    webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+}
+
+.project-content {
+  p {
+    font-family: sans-serif;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
 }
 
 @keyframes wind {

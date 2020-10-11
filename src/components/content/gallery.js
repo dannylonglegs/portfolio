@@ -10,12 +10,12 @@ import "pure-react-carousel/dist/react-carousel.es.css"
 import Img from "gatsby-image"
 
 const Gallery = props => {
-  console.log(props.project.gallery)
-  const indexLimit = props.project.gallery.length
+  const indexLimit = props.project.galleryTags.length
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  let images = props.project.gallery.map((img, i) => {
-    return <Img fluid={img.fluid} />
+  let images = props.project.galleryTags.map((img, i) => {
+    console.log(img, "image with gallery tags")
+    return <Img className={img.tag} fluid={img.image.fluid} />
   })
 
   useEffect(() => {
@@ -51,12 +51,6 @@ const Gallery = props => {
 
   return (
     <div class="gallery">
-      {/* {images[currentIndex]}
-      <div class="image-nav">
-        <button id="decrease" onClick={decreaseIndex}>←</button>
-        <span>{currentIndex + 1 + "/" + indexLimit}</span>
-        <button id="increase" onClick={increaseIndex}>→</button>
-      </div> */}
       {images}
     </div>
   )
