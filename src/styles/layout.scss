@@ -48,6 +48,12 @@ a.email {
     &.mobile {
       width: 30vw;
     }
+    &.portrait {
+      width: 40vw;
+    }
+    &.landscape {
+      width: 70vw;
+    }
     @include medium {
       width: 100%;
       &.desktop {
@@ -56,6 +62,12 @@ a.email {
       &.mobile {
         width: 44vw;
       }
+      &.portrait {
+        width: 40vw;
+      }
+      &.landscape {
+        width: 100vw;
+      }
     }
 
     @include small {
@@ -63,6 +75,12 @@ a.email {
         width: 100vw;
       }
       &.mobile {
+        width: 100vw;
+      }
+      &.portrait {
+        width: 100vw;
+      }
+      &.landscape {
         width: 100vw;
       }
     }

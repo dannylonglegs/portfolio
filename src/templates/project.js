@@ -39,8 +39,8 @@ class ProjectTemplate extends React.Component {
               }
             />
             <div class="links">
-              <a href={project.link}>→ Visit Site</a>
-              <a href={project.githubLink}>→ Github Repository</a>
+              {project.link ? <a href={project.link}>→ Visit Site</a> : null}
+              {project.githubLink ? <a href={project.githubLink}>→ Github Repository</a> : null }
             </div>
           </div>
           <Gallery project={project} />
