@@ -50,6 +50,21 @@ a.email {
     }
     @include medium {
       width: 100%;
+      &.desktop {
+        width: 100vw;
+      }
+      &.mobile {
+        width: 44vw;
+      }
+    }
+
+    @include small {
+      &.desktop {
+        width: 100vw;
+      }
+      &.mobile {
+        width: 100vw;
+      }
     }
   }
 }
@@ -148,11 +163,21 @@ p.description {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 64px;
+
+    @include medium {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
   }
   
   .links {
     display: flex;
     flex-direction: column;
+
+    @include medium {
+      margin-top: 32px;
+    }
+    
     a {
       font-size: 28px;
       margin-bottom: 32px;
