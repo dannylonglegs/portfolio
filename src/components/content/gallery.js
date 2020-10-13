@@ -14,7 +14,6 @@ const Gallery = props => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   let images = props.project.galleryTags.map((img, i) => {
-    console.log(img, "image with gallery tags")
     return <Img className={img.tag} fluid={img.image.fluid} />
   })
 

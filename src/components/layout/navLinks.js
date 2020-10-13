@@ -3,7 +3,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const NavLinks = props => {
   let links = props.projects.map(project => {
-    // console.log(project)
     return (
       <li class="work-link">
         <AniLink fade to={"/" + project.node.slug}>

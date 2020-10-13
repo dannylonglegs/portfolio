@@ -21,8 +21,6 @@ class ProjectTemplate extends React.Component {
 
   render() {
     const project = this.props.data.contentfulProject
-
-    console.log(this.props, "props in project")
     return (
       <Layout location={this.props.location}>
         <SEO title={project.projectTitle} />

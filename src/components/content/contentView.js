@@ -33,11 +33,9 @@ const ContentView = props => {
 
   if (props.project.gallery) {
     images = props.project.gallery.map((image, i) => {
-      console.log(image)
       return <ImageWrapper image={image} />
     })
   }
-  console.log(images)
   return (
     <div class="carousel">
       {images[currentIndex]}
