@@ -12,7 +12,18 @@ module.exports = {
     phoneStr: `(514)968-5526`,
     siteUrl: `https://www.danielalexanderfernandes.ca`,
     description: `My name is Daniel Alexander Fernandes and I am a freelance front-end web developer from Winnipeg, MB currently located in Montreal, QC. I am especially interested in simple website design, UI/UX, and React. The websites I make usually use the jamstack of Gatsby / React / Contentful / Netlify.`,
-    skills: ['HTML', 'JavaScript', 'React', 'Gatsby', 'Wordpress', 'CSS & SASS', 'A11y', 'Figma', "Photoshop"]
+    skills: [
+      "HTML",
+      "JavaScript",
+      "React",
+      "Gatsby",
+      "Nextjs",
+      "Wordpress",
+      "CSS & SASS",
+      "A11y",
+      "Figma",
+      "Photoshop",
+    ],
   },
   plugins: [
     {
@@ -72,10 +83,10 @@ module.exports = {
       options: {
         spaceId: `e82ldd7rek1u`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `QotnjaeWy1Zm54yb-0sicbgRtw7nJ5f8DR5CQ4IP2n4`
+        accessToken: `QotnjaeWy1Zm54yb-0sicbgRtw7nJ5f8DR5CQ4IP2n4`,
       },
     },
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
